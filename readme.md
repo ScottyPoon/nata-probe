@@ -20,8 +20,8 @@ The toolkit is designed to run on Python 3.9+ and requires the `requests` librar
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your-repo-link]
-    cd [your-repo-directory]
+    git clone https://github.com/ScottyPoon/nata-probe.git
+    cd nata-probe
     ```
 
 2.  **Create and activate a virtual environment (recommended):**
