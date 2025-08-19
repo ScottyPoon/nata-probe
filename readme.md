@@ -3,9 +3,8 @@
 
 ## Overview
 
-This project is the primary output of a Security Engineering course project. It began as a deep-dive analysis into the OverTheWire Natas wargames and evolved into the creation of a modular, Python-based security toolkit designed to intelligently automate the discovery and exploitation of common web vulnerabilities.
+This project is the primary output of a Security Engineering course, born from a deep-dive analysis into the OverTheWire Natas wargames. It has two main components: detailed writeups for each Natas challenge and a modular, Python-based security toolkit. The toolkit is designed to intelligently automate the discovery and exploitation of common web vulnerabilities, with each module directly inspired by a specific wargame level. The writeups provide a comprehensive analysis of the vulnerabilities, complementing the practical application of the toolkit.
 
-The core philosophy of this toolkit is to move beyond simple, blind exploitation and implement more intelligent, analysis-driven automation. Each module was directly inspired by a specific challenge encountered during the Natas wargames, translating theoretical knowledge into a practical, reusable tool.
 
 ## Features
 
